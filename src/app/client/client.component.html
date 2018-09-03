@@ -1,0 +1,6 @@
+<div *ngIf="user">{{user}}</div>
+<input (keyup)="findUser(userInput.value); repos=null;" #userInput/>
+<button (click)="getRepos(userInput.value)"><i class="fas fa-search"></i></button>
+<div class="repo" *ngFor="let repo of repos" (click)="getRepo(repo.name); repos = null;">{{repo.name}}</div>
+<div *ngIf="user" (click)="getRepos(user.login)" class="user"><img src={{user.avatar_url}} width="70rem"/>{{user.login}}</div>
+<div *ngIf="repo" >{{repo.name}}</div>

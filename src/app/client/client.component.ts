@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {GithubService} from '../github-service.service';
-import { environment } from '../../environments/environment.prod';
 
 @Component({
   selector: 'app-client',

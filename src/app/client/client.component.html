@@ -1,6 +1,15 @@
-<div *ngIf="user">{{user}}</div>
-<input (keyup)="findUser(userInput.value); repos=null;" #userInput/>
-<button (click)="getRepos(userInput.value)"><i class="fas fa-search"></i></button>
-<div class="repo" *ngFor="let repo of repos" (click)="getRepo(repo.name); repos = null;">{{repo.name}}</div>
-<div *ngIf="user" (click)="getRepos(user.login)" class="user"><img src={{user.avatar_url}} width="70rem"/>{{user.login}}</div>
-<div *ngIf="repo" >{{repo.name}}</div>
+<div class="client-wrapper">
+  <div class="searchBar">
+      <input (keyup)="findUser(userInput.value); repos=null;" #userInput autofocus placeholder="User / Organization" />
+      <button (click)="user ? getRepos(userInput.value) : null"><i class="fas fa-search"></i></button>
+  </div>
+  <div class="info">
+      <div class="repo" *ngFor="let repo of repos" (click)="getRepo(repo.name); repos = null;">/{{repo.name}}</div>
+      <div class="noRepos" *ngIf="repos && !repos.length">NO REPOS FOUND</div>
+      <div class="noRepos" *ngIf="userInput.value && !user">Loading</div>
+      <div *ngIf="user && user.login" (click)="getRepos(user.login)" class="user"><img src={{user.avatar_url}} width="70rem"/>{{user.login}}</div>
+      <app-repo *ngIf="repo"></app-repo>
+  </div>
+  
+</div>
+

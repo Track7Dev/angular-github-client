@@ -1,20 +1,104 @@
-.repo {
-  background-color: rgb(49, 0, 155);
-  margin: 1rem;
-  padding: 1rem;
+.client-wrapper {
+  background: teal;
+  max-height: 500px;
+  width: 100%;
+  overflow: hidden;
+  border-radius:1rem; 
+}
+.info {
+  background-color: rgb(108, 147, 201);
+  width: 100%;
+  max-height: 450px;
   display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden; 
+  padding: 1rem 0;
+}
+.repo {
+  background-color: #201e67;
+  padding: 0.5rem 1rem;
+  color: white;
   justify-content: center;
   align-items: center;
+  text-align: start;
+  word-break: break-all;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
 }
 
+.repo:hover {
+  background-color: rgb(221, 226, 255);
+  color: #05004e;
+}
 .repo > a {
   text-decoration: none;
   color: white;
 }
 
 .user {
-  background-color: green;
+  cursor: pointer;
+  background-color: #262376;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  padding: 1rem;
+  font-size: 1.5rem;  
+  color: white;
+  transition: background-color 0.45s;
+}
+.user:hover {
+  background: #211e67;
+}
+
+.user > img {
+  border-radius: 100%; 
+  margin-right: 1rem;
+}
+
+.searchBar {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  border-bottom: 1px solid white;
+
+}
+
+.searchBar input {
+ flex:1;
+ width: 100%;
+ padding: 0.5rem 1.5rem; 
+ font-size: 1.7rem;
+ background-color: #262376; 
+ outline: none;
+ border: none;
+ color: white;
+ text-align: center;
+ transition: background-color 0.45s;
+}
+.searchBar input:focus , .searchBar input:hover {
+  background-color: #201e67;
+}
+
+.searchBar input::placeholder {
+  color: white;
+  opacity: 0.2;
+}
+
+.searchBar button {
+  width: 4rem;
+  font-size: 1.2rem;
+  background-color:#3d5272;
+  color: white; 
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.45s, color 0.45s;
+}
+
+.searchBar button:hover {
+  background-color: #6896ff;
+  color: #05004e;
 }

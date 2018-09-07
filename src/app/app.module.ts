@@ -4,11 +4,13 @@ import { FormsModule }    from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ClientComponent } from './client/client.component';
+import { RepoComponent } from './repo/repo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientComponent
+    ClientComponent,
+    RepoComponent
   ],
   imports: [
     BrowserModule,

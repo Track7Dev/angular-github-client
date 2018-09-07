@@ -1,0 +1,19 @@
+<div *ngIf="client.repo ">
+    <header class="repo-header">/{{client.repo.full_name}}<button (click)="client.getRepos(client.user.login)">Back</button></header>
+    <div class="repo-wrapper">
+      <header>
+        <span  style="color:red" >{{updatedAt}}</span>
+        <span *ngIf="!client.repo.archived" style="color: green">Active</span>
+        <span *ngIf="client.repo.archived" style="color:red" >Archived</span>
+      </header>
+      <div class="repo-info">
+        <div >{{description}}</div>
+        
+        <div class="img">
+          <img src="https://image.flaticon.com/icons/svg/25/25406.svg" width="100%" height="100%">
+          <input #fork value="bob" hidden/>
+        </div>
+      </div>
+    </div>
+  </div>
+ 

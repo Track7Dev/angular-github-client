@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {GithubService} from '../github-service.service';
-///<reference types="node" />
 
 @Component({
   selector: 'app-client',

@@ -8,7 +8,7 @@ import {GithubService} from '../github-service.service';
   styleUrls: ['./client.component.css']
 })
 export class ClientComponent {
-  private repos : Array<any>;
+  public repos : Array<any>;
   public repo;
   public user;
   constructor(private github : GithubService) { }

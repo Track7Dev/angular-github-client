@@ -8,6 +8,7 @@
   flex-direction: column;
 }
 
+
 .app > header {
   height: 4rem;
   z-index: 10;
@@ -21,6 +22,36 @@
   font-weight: 700;
   color: white;
   
+}
+
+.app > header span {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: teal;
+}
+
+footer {
+  width: 100%; 
+  background-color: #041549; 
+  font-size: 0.8rem;
+  font-weight: 700; 
+  color: teal;
+  border-top: 1.5px solid white; 
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+}
+
+footer a {
+  color: white;
+  cursor: pointer;
+  transition: 0.45s color;
+  margin-left:0.5rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #9ab0ff;
 }
 
 .main-wrapper {

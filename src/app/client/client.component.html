@@ -6,7 +6,7 @@
   <div class="info">
       <div class="repo" *ngFor="let repo of repos" (click)="getRepo(repo.name); repos = null;">/{{repo.name}}</div>
       <div class="noRepos" *ngIf="repos && !repos.length">NO REPOS FOUND</div>
-      <div class="noRepos" *ngIf="userInput.value && !user">Loading</div>
+      <div class="noRepos" *ngIf="userInput.value.trim().length && !user">Loading</div>
       <div *ngIf="user && user.login" (click)="getRepos(user.login)" class="user"><img src={{user.avatar_url}} width="70rem"/>{{user.login}}</div>
       <app-repo *ngIf="repo"></app-repo>
   </div>

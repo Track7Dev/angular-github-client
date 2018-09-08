@@ -13,8 +13,9 @@ export class ClientComponent {
   constructor(private github : GithubService) { }
 
   findUser = async (user) => { 
+    if(!user.trim().length) return;
     this.repo = null;
-    this.user = (await this.github.findUser(user));
+    this.user = (await this.github.findUser(user.trim()));
     if(this.user) this.user = this.user.data;
   }
   

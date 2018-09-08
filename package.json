@@ -1,8 +1,10 @@
 {
   "name": "github-client",
   "version": "0.0.0",
-  "npm": "6.2.0",
-  "node": "10.9.0",
+  "engines": {
+    "npm": "6.2.0",
+    "node": "10.9.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "node server.js",

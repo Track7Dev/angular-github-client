@@ -4,7 +4,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 /// <reference types="node" />
 
-console.log(process.env.GITHUB);
+console.log(process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === 'production') {
   enableProdMode();

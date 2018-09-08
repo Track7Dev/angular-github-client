@@ -8,11 +8,13 @@
   "scripts": {
     "ng": "ng",
     "start": "node -r dotenv/config server.js",
+    "start:local": "npm run build && nodemon -r dotenv/config server.js",
+    "build:prod": "ng build --aot --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "postinstall": "npm run build:prod"
   },
   "private": true,
   "dependencies": {

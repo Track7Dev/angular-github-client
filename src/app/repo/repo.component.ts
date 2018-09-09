@@ -12,7 +12,7 @@ export class RepoComponent implements OnInit {
   public client = this.clientComponent;
   private user = this.clientComponent.user;
   private updatedAt = this.clientComponent.repo && String(this.clientComponent.repo.updated_at).split('T')[0];
-  private description = this.clientComponent.repo && this.clientComponent.repo.description;
+  private description = this.clientComponent.repo && this.clientComponent.repo.description  ||  "No Description";
   ngOnInit() {
   }
 
